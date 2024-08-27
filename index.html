@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Redirect</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+      }
+      input[type='text'] {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>URL Redirect</h1>
+      <input type="text" id="urlInput" placeholder="Paste URL here" />
+      <br />
+      <button onclick="redirect()">Go</button>
+    </div>
+
+    <script>
+      function redirect() {
+        var url = document.getElementById('urlInput').value;
+        if (url) {
+          window.location.href = url;
+        } else {
+          alert('Please enter a URL.');
+        }
+      }
+    </script>
+  </body>
+</html>
